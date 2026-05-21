@@ -1,10 +1,10 @@
+
 struct Student {
-    1: string name,
-    2: i32 age,
-    3: list<string> courses
+  1: required string name,
+  2: optional i64 age,
+  3: optional list<string> courses
 }
 
 service School {
-    Student enrollCourse(1: Student student, 2: string courseName)
+    Student enrollCourse(1: required Student student, 2: required string courses)
 }
-
